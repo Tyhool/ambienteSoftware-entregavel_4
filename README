@@ -1,0 +1,39 @@
+É um exercicio da cadeira de Ambiente de Software na Unifor
+O exercicio conta com 6 funções em JavaScript e um teste onde vai rodar as condiçoes(allFunctions.tes.js)
+Foi instalado no terminal:
+  Node
+  npm install
+  npm install --save-dev jest
+ 
+O Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade. Ele utiliza o TDD (Test Driven Development)
+Que basicamente são criados testes antes do código de cada funcionalidade. Isso funciona em ciclos, onde inicialmente escrevemos o teste e o executamos com o objetivo de que ele falhe.
+
+A execução é utilizado no terminal "npm test"
+
+Configuração:
+Quando instalar o npm abra o arquivo package.json e altere o comando:
+
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+
+para esse aqui:
+
+  "scripts": {
+      "test": "jest --verbose"
+    },
+Os arquivos .js são todas function com o final (module.exports = NOME_METODO;)
+
+no allFunctions.test.js
+  
+  const seu_metodo = require('../funcoes/seu_metodo');
+  
+para chamar a função desejada.
+
+describe('seu_metodo', function() {
+test('seu_metodo descrição', () => 
+    expect(condição).toBe(resposta);
+  });
+  
+Para testar se esta funcionando vai no terminal e digita "npm test" que vai rodar e passar
